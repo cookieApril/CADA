@@ -1,0 +1,19 @@
+2024-06-21 08:40:17,580 IRRA INFO: {'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'CUHK-PEDES', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': (384, 128), 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm+id', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': (20, 50), 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'iira', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'logs/CUHK-PEDES/20240621_003305_iira', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': 'your dataset root dir', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2024-06-21 08:40:18,562 IRRA.dataset INFO: => CUHK-PEDES Images and Captions are loaded
+2024-06-21 08:40:18,563 IRRA.dataset INFO: CUHKPEDES Dataset statistics:
+2024-06-21 08:40:18,563 IRRA.dataset INFO: 
++--------+-------+--------+----------+
+| subset |  ids  | images | captions |
++--------+-------+--------+----------+
+| train  | 11003 | 34054  |  68126   |
+|  test  |  1000 |  3074  |   6156   |
+|  val   |  1000 |  3078  |   6158   |
++--------+-------+--------+----------+
+2024-06-21 08:40:19,666 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': (384, 128), 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2024-06-21 08:40:33,648 IRRA.test INFO: Enter inferencing
+2024-06-21 08:40:54,696 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 73.376 | 89.831 | 93.713 | 66.125 | 50.239 |
++------+--------+--------+--------+--------+--------+
