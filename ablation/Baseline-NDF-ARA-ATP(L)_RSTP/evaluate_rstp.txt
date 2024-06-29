@@ -1,0 +1,1 @@
+{"test_img_r1": 67.9, "test_img_r5": 86.4, "test_img_r10": 91.55, "test_img_r_mean": 81.95, "test_mAP": 52.52257470693045, "test_r_mean": 134.47257470693046, "test_glb_img_r1": 59.6, "test_glb_img_r5": 81.2, "test_glb_img_r10": 88.25, "test_glb_img_r_mean": 76.35000000000001, "test_glb_mAP": 46.70203845122749, "test_glb_r_mean": 123.0520384512275}
